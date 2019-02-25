@@ -5,9 +5,9 @@ A demo can be found at: http://patchdev.com/demos/frontendtest/index.html
 
 ## Installation
 
-`yarn install` to install all dependencies
-`yarn serve` to run development server at (`localhost:8080`)
-`yarn run build` builds app for deployment
+- `yarn install` to install all dependencies
+- `yarn serve` to run development server at (`localhost:8080`)
+- `yarn run build` builds app for deployment
 
 ## Application Rubric
 
