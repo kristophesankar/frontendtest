@@ -20,12 +20,28 @@
 </template>
 
 <script>
+  import { generateUID } from "../utils/utils.js";
+
   export default {
     name: 'Chessboard',
     methods: {
       toggleClass: function(event){
         event.target.classList.toggle('overlay')
+        let arr = this.$store.getters.boardClicks
+        const clickEvent = {
+          id: generateUID(),
+          createDateTime: new Date(),
+          location: event.target.id
+        }
+        arr.push(clickEvent)
+        this.sortEvents(arr)
+        this.$store.commit('change', arr)
       },
+      sortEvents: function () {
+        return this.$store.getters.boardClicks.sort((a,b) => {
+          return new Date(b.createDateTime) - new Date(a.createDateTime)
+        })
+      }
     },
     data() {
       return {

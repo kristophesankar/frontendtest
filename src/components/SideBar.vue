@@ -4,6 +4,15 @@
     <span class="title-break">Front-End Challenge</span>
     <div class="event-history">
       <span><b>Move History</b></span><br>
+      <span v-for="event of boardClicks" v-bind:key="event.id">
+        <br>
+        {{
+          `Time: ${event.createDateTime.getHours()}:
+          ${event.createDateTime.getMinutes()}:
+          ${event.createDateTime.getSeconds()}`
+        }}<br>
+        {{ `Move: ${event.location}` }}<br>
+      </span>
     </div>
   </div>
 </template>
