@@ -7,12 +7,16 @@
           class="white"
           v-bind:id="cols[col-1]+rows[row-1]"
           @click="toggleClass">
+          {{ row === 8 ? cols[col-1] : '' }}
+          {{ col === 1 ? rows[row-1] : '' }}
         </div>
         <div
           v-else
           v-bind:id="cols[col-1]+rows[row-1]"
           class="black"
           @click="toggleClass">
+          {{ row === 8 ? cols[col-1] : '' }}
+          {{ col === 1 ? rows[row-1] : '' }}
         </div>
       </span>
     </span>
@@ -74,6 +78,7 @@
     background-color: #e8e9d1;
     height: 12.5%;
     width: 12.5%;
+    color: #527097;
     max-height: 100vw;
     max-width: 100vw;
     float: left;
