@@ -31,13 +31,17 @@
     methods: {
       toggleClass: function(event){
 
+        // clears previously clicked square
         if(this.previous !== ''){
           document.getElementById(this.previous).classList.toggle('overlay')
         }
 
+        //applys overlay
         event.target.classList.toggle('overlay')
         this.previous = event.target.id;
         let arr = this.$store.getters.boardClicks
+
+        // generates click object
         const clickEvent = {
           id: generateUID(),
           createDateTime: new Date(),
@@ -45,15 +49,21 @@
         }
         arr.push(clickEvent)
         this.sortEvents(arr)
+
+        // update store with object
         this.$store.commit('change', arr)
       },
       sortEvents: function () {
+
+        // sorts moves based on date
         return this.$store.getters.boardClicks.sort((a,b) => {
           return new Date(b.createDateTime) - new Date(a.createDateTime)
         })
       }
     },
     data() {
+
+      // component state
       return {
         previous: '',
         isActive: false,

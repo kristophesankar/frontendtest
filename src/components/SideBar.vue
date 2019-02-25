@@ -3,7 +3,6 @@
     <div class="title">Move History</div>
     <div class="event-history" v-if="boardClicks.length > 0">
       <span v-for="event of boardClicks" v-bind:key="event.id">
-
         <span class="moves"> {{ event.location }}</span> at
         {{event.createDateTime.getHours()}}:{{event.createDateTime.getMinutes()}}
         {{ (event.createDateTime.getHours() > 12) ? 'pm' : 'am' }}
