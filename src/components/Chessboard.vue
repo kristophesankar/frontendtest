@@ -26,7 +26,13 @@
     name: 'Chessboard',
     methods: {
       toggleClass: function(event){
+
+        if(this.previous !== ''){
+          document.getElementById(this.previous).classList.toggle('overlay')
+        }
+
         event.target.classList.toggle('overlay')
+        this.previous = event.target.id;
         let arr = this.$store.getters.boardClicks
         const clickEvent = {
           id: generateUID(),
@@ -45,6 +51,7 @@
     },
     data() {
       return {
+        previous: '',
         isActive: false,
         cols: ['A','B','C','D','E','F','G','H'],
         rows: ['8','7','6','5','4','3','2','1'],
@@ -57,8 +64,8 @@
   .board {
     border: 10px solid gray;
     text-align: center;
-    width: 80vh;
-    height: 80vh;
+    width: 70vh;
+    height: 70vh;
     margin: auto;
     padding: 1px;
     border-radius: 10px;

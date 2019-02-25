@@ -1,19 +1,17 @@
 <template>
   <div id="sidenav" class="sidenav">
-    <span class="title">Chess.com</span><br>
-    <span class="title-break">Front-End Challenge</span>
-    <div class="event-history">
-      <span><b>Move History</b></span><br>
+    <div class="title">Move History</div>
+    <div class="event-history" v-if="boardClicks.length > 0">
       <span v-for="event of boardClicks" v-bind:key="event.id">
-        <br>
         {{
           `Time: ${event.createDateTime.getHours()}:
           ${event.createDateTime.getMinutes()}:
           ${event.createDateTime.getSeconds()}`
         }}<br>
-        {{ `Move: ${event.location}` }}<br>
+        {{ `Move: ${event.location}` }}<br><br>
       </span>
     </div>
+    <div v-else class="event-history" >no moves played...</div>
   </div>
 </template>
 
@@ -46,12 +44,7 @@ export default {
   .title {
     font-weight: bold;
     color: white;
-  }
-
-  .title-break {
-    font-weight: bold;
-    color: white;
-    padding: 5px;
+    margin-top: 20px;
   }
 
   .event-history {
@@ -60,6 +53,4 @@ export default {
     padding: 10px;
     margin: 10px;
   }
-
-
 </style>

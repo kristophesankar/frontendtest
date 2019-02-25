@@ -1,6 +1,7 @@
 <template>
   <div class="main-section">
-    <h1>Chessboard</h1>
+    <h1>Chess.com Challenge</h1>
+    <p>click the squares to record your moves...</p>
     <Chessboard />
   </div>
 </template>
