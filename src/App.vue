@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <SideBar />
     <MainSection />
+    <SideBar />
   </div>
 </template>
 
@@ -57,7 +57,7 @@
     }
 
     .main-section {
-      margin-left: 0px;
+      margin-right: 0px;
     }
 
     .board {
