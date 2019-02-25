@@ -1,6 +1,6 @@
 <template>
   <div class="main-section">
-    <h1>Chess.com Challenge</h1>
+    <div><span class="heading">Chess.com Challenge </span>by Arjuna Sankar</div>
     <p>click the squares to record your moves...</p>
     <Chessboard />
   </div>
@@ -19,5 +19,11 @@
 <style>
   .main-section {
     margin-right: 200px;
+    color: #e8e9d1;
+  }
+
+  .heading {
+    font-size:32px;
+    font-weight: 800;
   }
 </style>

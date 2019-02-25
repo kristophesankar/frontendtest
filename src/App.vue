@@ -29,10 +29,15 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+
+  }
+
+  html {
+    background-image: url('./assets/battle-black-and-white-board-game-358562.jpg');
   }
 
   /* mobile - most cases */
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     .sidenav {
       width:100%;
       top: 70vh;
@@ -44,14 +49,13 @@
       text-align: center;
       width: 100%;
       height: 30px;
-      background-color: black;
+      background-color: #527097;
       margin-top: 0px;
       padding-top:10px;
     }
 
     .event-history {
       margin-top: 40px !important;
-      background: #eee;
       padding: 10px;
       margin: 10px;
     }

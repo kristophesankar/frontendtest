@@ -3,12 +3,11 @@
     <div class="title">Move History</div>
     <div class="event-history" v-if="boardClicks.length > 0">
       <span v-for="event of boardClicks" v-bind:key="event.id">
-        {{
-          `Time: ${event.createDateTime.getHours()}:
-          ${event.createDateTime.getMinutes()}:
-          ${event.createDateTime.getSeconds()}`
-        }}<br>
-        {{ `Move: ${event.location}` }}<br><br>
+
+        <span class="moves"> {{ event.location }}</span> at
+        {{event.createDateTime.getHours()}}:{{event.createDateTime.getMinutes()}}
+        {{ (event.createDateTime.getHours() > 12) ? 'pm' : 'am' }}
+        <br><br>
       </span>
     </div>
     <div v-else class="event-history" >no moves played...</div>
@@ -36,21 +35,33 @@ export default {
     top: 0;
     right: 0;
     float:right;
-    background-color: #111;
+    background-color: #e8e9d1;
     overflow-x: hidden;
     transition: 0.5s;
-    border: solid 4px #ccc;
+    border: solid 4px #7f7f7f;
+  }
+
+  .moves{
+    border: solid 1px black;
+    padding:5px;
+    border-radius: 5px;
+    background-color: #B0C1D7;
+    font-weight: 600;
   }
 
   .title {
     font-weight: bold;
     color: white;
     margin-top: 20px;
+    width: 100%;
+    height: 30px;
+    background-color: #527097;
+    margin-top: 0px;
+    padding-top:10px;
   }
 
   .event-history {
     margin-top: 10px;
-    background: #eee;
     padding: 10px;
     margin: 10px;
   }

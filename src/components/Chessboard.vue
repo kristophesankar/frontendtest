@@ -67,13 +67,11 @@
     width: 70vh;
     height: 70vh;
     margin: auto;
-    padding: 1px;
-    border-radius: 10px;
     margin-top: 20px;
   }
 
   .white {
-    background-color: white;
+    background-color: #e8e9d1;
     height: 12.5%;
     width: 12.5%;
     max-height: 100vw;
@@ -84,7 +82,7 @@
   }
 
   .black {
-    background-color: black;
+    background-color: #527097;
     height: 12.5%;
     width: 12.5%;
     max-height: 100vw;
@@ -96,9 +94,9 @@
   }
 
   .overlay{
-    background-color: #2ce6a1;
+    background-color: #B0C1D7;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid #586d95;
     z-index: 999999;
   }
 </style>
