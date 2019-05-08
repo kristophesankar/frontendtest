@@ -27,7 +27,7 @@
   import { generateUID } from "../utils/utils.js";
 
   export default {
-    name: 'Chessboard',
+    name: 'ChessBoard',
     methods: {
       toggleClass: function(event){
 
